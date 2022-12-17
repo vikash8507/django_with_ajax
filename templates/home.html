@@ -11,6 +11,8 @@
 <body>
 <h2>Person Form</h2>
 
+<img src="{{bannerImage}}" alt=''/>
+
 <form method="post" id="personForm" data-cities-url="{% url 'load_states' %}">
     {% csrf_token %}
     {{ form.as_p }}
