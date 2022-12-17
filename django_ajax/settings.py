@@ -49,6 +49,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'form_ajax.middlewares.CustomMiddleware'
 ]
 
 ROOT_URLCONF = 'django_ajax.urls'
