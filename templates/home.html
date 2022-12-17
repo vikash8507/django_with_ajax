@@ -1,3 +1,4 @@
+{% load poll_extras %}
 <!doctype html>
 <html lang="en">
 <head>
@@ -15,6 +16,21 @@
     {{ form.as_p }}
     <input type="submit" value="Submit">
 </form>
+
+<table border=1>
+    <tr>
+        <th>Person Name</th>
+        <th>Country</th>
+        <th>State</th>
+    </tr>
+    {% for person in persons %}
+        <tr>
+            <td>{{ person.name|change_words_case:'t' }}</td>
+            <td>{{ person.country.name }}</td>
+            <td>{{ person.state.name }}</td>
+        </tr>
+    {% endfor %}
+</table>
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script>
