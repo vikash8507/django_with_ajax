@@ -2,7 +2,9 @@ from django.shortcuts import render, redirect
 
 from .models import Person, State
 from .forms import PersonForm
+from .decorators import authentication_not_required
 
+@authentication_not_required
 def person_create_view(request):
     form  = PersonForm()
     persons = Person.objects.all()
